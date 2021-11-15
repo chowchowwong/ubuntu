@@ -1,0 +1,29 @@
+sort1 uses: Bubble sort
+
+How do you know?: For 50000 lines of data, sort 1 takes the shortest time for the sorted case (5.748s), while for the random(16.727s) and reversed (15.393s) cases are taking much longer time. Bubble sort has the best case runtime of Big Omega(n) and worst case runtime of Big O(n^2). For the best case scenario which the array is already sorted, bubble sort makes no swaps on the first pass. And for the worst reversed case, we have to bubble each element all the way across the array.
+
+sort2 uses: Merge sort
+
+How do you know?: For 50000 lines of data, sort 2 takes similar time for the cases of random(3.117s) and reversed(3.568s) but longer time for sorted(6.620s). Merge sort has the same best case runtime of Big Omega(nlogn) and worst case runtime of Big O(nlogn). No matter the array is sorted or not, merge sort has to split and recombine the data recursively to sort the data. Assuming sort 3 is selection sort, merge sort is faster than selection sort in general, no matter it's the best or the worst case
+sort3 uses: Selection sort
+
+How do you know?: For 50000 lines of data, sort 3 takes similar time for the cases of random(9.941s), reversed(8.844s) and sorted(10.182s). Selection sort has the same best case runtime of Big Omega(n^2) and worst case runtime of Big O(n^2). No matter the array is sorted or not, selection sort has to iterate over each of the elements in the data to find the smallest unsorted element.
+reversed10000.txt
+sort1: 0.388
+sort2: 0.065
+sort3: 0.162
+
+reversed50000.txt
+sort1: 15.393
+sort2: 3.117
+sort3: 8.844
+
+random50000.txt
+sort1: 16.727
+sort2: 3.568
+sort3: 9.941
+
+sorted50000.txt 
+sort1: 5.748
+sort2: 6.620
+sort3: 10.182
